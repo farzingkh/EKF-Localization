@@ -130,6 +130,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/workspace/Sensor-Fusion-EKF/build/turtlebot_simulator/turtlebot_simulator/cmake_install.cmake")
   include("/home/workspace/Sensor-Fusion-EKF/build/turtlebot_simulator/turtlebot_stage/cmake_install.cmake")
   include("/home/workspace/Sensor-Fusion-EKF/build/turtlebot_simulator/turtlebot_stdr/cmake_install.cmake")
+  include("/home/workspace/Sensor-Fusion-EKF/build/robot_pose_ekf/cmake_install.cmake")
 
 endif()
 
