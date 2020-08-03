@@ -325,6 +325,12 @@ catkin_DIR:PATH=/opt/ros/kinetic/share/catkin/cmake
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/kinetic/share/cpp_common/cmake
 
+//The directory containing a CMake configuration file for diagnostic_msgs.
+diagnostic_msgs_DIR:PATH=/opt/ros/kinetic/share/diagnostic_msgs/cmake
+
+//The directory containing a CMake configuration file for diagnostic_updater.
+diagnostic_updater_DIR:PATH=/opt/ros/kinetic/share/diagnostic_updater/cmake
+
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/kinetic/share/gencpp/cmake
 
@@ -386,8 +392,11 @@ gtest_force_shared_crt:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
+//The directory containing a CMake configuration file for joy.
+joy_DIR:PATH=/opt/ros/kinetic/share/joy/cmake
+
 //Path to a library.
-lib:FILEPATH=/opt/ros/kinetic/lib/libtf2.so
+lib:FILEPATH=/opt/ros/kinetic/lib/libxmlrpcpp.so
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/kinetic/share/message_filters/cmake
@@ -402,6 +411,12 @@ message_runtime_DIR:PATH=/opt/ros/kinetic/share/message_runtime/cmake
 nav_msgs_DIR:PATH=/opt/ros/kinetic/share/nav_msgs/cmake
 
 //Value Computed by CMake
+odom_to_trajectory_BINARY_DIR:STATIC=/home/workspace/Sensor-Fusion-EKF/build/odom_to_trajectory
+
+//Value Computed by CMake
+odom_to_trajectory_SOURCE_DIR:STATIC=/home/workspace/Sensor-Fusion-EKF/src/odom_to_trajectory
+
+//Value Computed by CMake
 robot_pose_ekf_BINARY_DIR:STATIC=/home/workspace/Sensor-Fusion-EKF/build/robot_pose_ekf
 
 //Value Computed by CMake
@@ -409,6 +424,9 @@ robot_pose_ekf_SOURCE_DIR:STATIC=/home/workspace/Sensor-Fusion-EKF/src/robot_pos
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/kinetic/share/rosconsole/cmake
+
+//The directory containing a CMake configuration file for rosconsole_bridge.
+rosconsole_bridge_DIR:PATH=/opt/ros/kinetic/share/rosconsole_bridge/cmake
 
 //The directory containing a CMake configuration file for roscpp.
 roscpp_DIR:PATH=/opt/ros/kinetic/share/roscpp/cmake
@@ -456,6 +474,30 @@ tf2_ros_DIR:PATH=/opt/ros/kinetic/share/tf2_ros/cmake
 tf_DIR:PATH=/opt/ros/kinetic/share/tf/cmake
 
 //Value Computed by CMake
+turtlebot_BINARY_DIR:STATIC=/home/workspace/Sensor-Fusion-EKF/build/turtlebot/turtlebot
+
+//Value Computed by CMake
+turtlebot_SOURCE_DIR:STATIC=/home/workspace/Sensor-Fusion-EKF/src/turtlebot/turtlebot
+
+//Value Computed by CMake
+turtlebot_bringup_BINARY_DIR:STATIC=/home/workspace/Sensor-Fusion-EKF/build/turtlebot/turtlebot_bringup
+
+//Value Computed by CMake
+turtlebot_bringup_SOURCE_DIR:STATIC=/home/workspace/Sensor-Fusion-EKF/src/turtlebot/turtlebot_bringup
+
+//Value Computed by CMake
+turtlebot_capabilities_BINARY_DIR:STATIC=/home/workspace/Sensor-Fusion-EKF/build/turtlebot/turtlebot_capabilities
+
+//Value Computed by CMake
+turtlebot_capabilities_SOURCE_DIR:STATIC=/home/workspace/Sensor-Fusion-EKF/src/turtlebot/turtlebot_capabilities
+
+//Value Computed by CMake
+turtlebot_description_BINARY_DIR:STATIC=/home/workspace/Sensor-Fusion-EKF/build/turtlebot/turtlebot_description
+
+//Value Computed by CMake
+turtlebot_description_SOURCE_DIR:STATIC=/home/workspace/Sensor-Fusion-EKF/src/turtlebot/turtlebot_description
+
+//Value Computed by CMake
 turtlebot_gazebo_BINARY_DIR:STATIC=/home/workspace/Sensor-Fusion-EKF/build/turtlebot_simulator/turtlebot_gazebo
 
 //Value Computed by CMake
@@ -478,6 +520,18 @@ turtlebot_stdr_BINARY_DIR:STATIC=/home/workspace/Sensor-Fusion-EKF/build/turtleb
 
 //Value Computed by CMake
 turtlebot_stdr_SOURCE_DIR:STATIC=/home/workspace/Sensor-Fusion-EKF/src/turtlebot_simulator/turtlebot_stdr
+
+//Value Computed by CMake
+turtlebot_teleop_BINARY_DIR:STATIC=/home/workspace/Sensor-Fusion-EKF/build/turtlebot/turtlebot_teleop
+
+//Value Computed by CMake
+turtlebot_teleop_SOURCE_DIR:STATIC=/home/workspace/Sensor-Fusion-EKF/src/turtlebot/turtlebot_teleop
+
+//The directory containing a CMake configuration file for urdf.
+urdf_DIR:PATH=/opt/ros/kinetic/share/urdf/cmake
+
+//The directory containing a CMake configuration file for xacro.
+xacro_DIR:PATH=/opt/ros/kinetic/share/xacro/cmake
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/kinetic/share/xmlrpcpp/cmake
@@ -646,7 +700,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=14
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

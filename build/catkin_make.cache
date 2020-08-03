@@ -1,2 +1,2 @@
-robot_pose_ekf:turtlebot_simulator/turtlebot_gazebo:turtlebot_simulator/turtlebot_simulator:turtlebot_simulator/turtlebot_stage:turtlebot_simulator/turtlebot_stdr
+odom_to_trajectory:robot_pose_ekf:turtlebot/turtlebot:turtlebot/turtlebot_bringup:turtlebot/turtlebot_capabilities:turtlebot/turtlebot_description:turtlebot/turtlebot_teleop:turtlebot_simulator/turtlebot_gazebo:turtlebot_simulator/turtlebot_simulator:turtlebot_simulator/turtlebot_stage:turtlebot_simulator/turtlebot_stdr
 -DCATKIN_DEVEL_PREFIX=/home/workspace/Sensor-Fusion-EKF/devel -DCMAKE_INSTALL_PREFIX=/home/workspace/Sensor-Fusion-EKF/install -G Unix Makefiles
