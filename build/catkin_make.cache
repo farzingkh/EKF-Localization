@@ -1,0 +1,2 @@
+turtlebot_simulator/turtlebot_gazebo:turtlebot_simulator/turtlebot_simulator:turtlebot_simulator/turtlebot_stage:turtlebot_simulator/turtlebot_stdr
+-DCATKIN_DEVEL_PREFIX=/home/workspace/Sensor-Fusion-EKF/devel -DCMAKE_INSTALL_PREFIX=/home/workspace/Sensor-Fusion-EKF/install -G Unix Makefiles
