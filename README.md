@@ -1,5 +1,5 @@
 # Sensor Fusion using EKF
-This repository include an example application of Extended Kalman Filter using  ```robot_pose_ekf``` cROS package on gazebo turtle bot simulation package using its IMU and wheel odometry data
+This repository include an example application of Extended Kalman Filter using  ```robot_pose_ekf```  ROS package on gazebo turtle bot simulation package using its IMU and wheel odometry data
 
 ## Directory Structure
 ```sh
@@ -68,12 +68,41 @@ This repository include an example application of Extended Kalman Filter using  
 
 ## Steps to launch the simulation
 
+Clone the repo:
+```sh
+$ git clone https://github.com/farzingkh/Sensor-Fusion-EKF.git
+```
+
+Build and setup:
+```sh
+$ catkin_make
+$ source devel/setup.bash
+```
+Launch the simulation
+```sh
+$ roslaunch main main.launch
+```
+
 ## Output
+
+Graph of nodes and topics 
+![alt text](./images/graph.png)
+
+Plot of filtered and unfiltered path: difference is small until the robot skids or hits an obstacel then wheel encoders might no show accurate data as the wheels might have slipped
+![alt text](./images/plots.png)
+
+
 
 # Kalman Filter
 
-One way of looking at Kalman filter is to consider it as any other types of filter. Filters are designed to eliminate or reduce noise from signal. Kalman filter, similarly, tries to eliminate uncertainty and noise from the data regarding the states of a system. Kalman fiter accepts a noisy measurement from sensors and assumes that the signals have Gaussian ditribution, and therefore, they can be described by their means and variance. This assumption is the main basis for Kalman filters. It also accepts inital guess about the states of the system, and then, it uses system models (State Transition Function in State Space modelling) to predict the next values for states of the system. Later, it updates the states based on next observations of the states from measured values by sensors. In general, Kalman Filter ca be described by two steps of measurement update and prediction:
+One way of looking at Kalman filter is to consider it as any other type of filter: designed to eliminate or reduce noise from signal. In the case of Kalman filter, its goal is to  reduce or eliminate uncertainty and noise from the data regarding the states of a system. Kalman filter accepts a noisy measurement from sensors and assumes that the signals have Gaussian ditribution, and therefore, they can be described by their means and variance. This assumption is the main basis for Kalman filters. It also accepts inital guess about the states of the system, and then, it uses system models (State Transition Function in State Space modelling) to predict the next values for states of the system. Later, it updates the states based on the next observations of the states obtained from measured values by sensors. In general, Kalman Ffilter can be described by two steps of measurement update and prediction. Following equations are used for calculations of each step:
 
 ![alt text](./images/equations.png)
 
 # Extended Kalman Filter
+
+Since Kalman filter is based on the assumption that sensor data can be modelled using Gaussian distribution, in which case if the system is nonlinear, transformation of sensor data model using nonlinear system model will result in non-Gaussian distribution. In this case a linearization of the state transition and measurement function can be used for prediction of means and covariance matrices whihc is the basis of Extended Kalman Filters (EKF). Following equations are used for calculations of each steps of predication and measurement update:
+
+![alt text](./images/equationsEKF.png)
+
+Where H (measurement matrix) and F (state transition matrix) are Jacobian of nonlinear f and h functions.
