@@ -60,7 +60,7 @@
   </node>
 
   <!--RVIZ-->
-  <node pkg="rviz" type="rviz" name="rviz" args="-d /home/workspace/catkin_ws/src/EKF.rviz"/>
+  <node pkg="rviz" type="rviz" name="rviz" args="-d /home/workspace/Sensor-Fusion-EKF/src/EKF.rviz"/>
   <!--Use this insted if you are cloning the whole repo in your src-->
   <!--<node pkg="rviz" type="rviz" name="rviz" args="-d /home/workspace/catkin_ws/src/RoboND-EKFLab/EKFLab.rviz"/>-->
 
