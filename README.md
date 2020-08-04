@@ -85,13 +85,13 @@ $ roslaunch main main.launch
 
 ## Output
 
-Graph of nodes and topics 
+Graph of nodes and topics.
+
 ![alt text](./images/graph.png)
 
-Plot of filtered and unfiltered path: difference is small until the robot skids or hits an obstacel then wheel encoders might no show accurate data as the wheels might have slipped
+Plot of filtered and unfiltered path: difference is small until the robot skids or hits an obstacel then wheel encoders might no show accurate data as the wheels might have slipped.  To see that use th ekeyboard and drive the robot until it hits and obstacel while you are still driving it and then yuo can see the difference between filtered and unfiltered plots.
+
 ![alt text](./images/plots.png)
-
-
 
 # Kalman Filter
 
@@ -101,8 +101,8 @@ One way of looking at Kalman filter is to consider it as any other type of filte
 
 # Extended Kalman Filter
 
-Since Kalman filter is based on the assumption that sensor data can be modelled using Gaussian distribution, in which case if the system is nonlinear, transformation of sensor data model using nonlinear system model will result in non-Gaussian distribution. In this case a linearization of the state transition and measurement function can be used for prediction of means and covariance matrices whihc is the basis of Extended Kalman Filters (EKF). Following equations are used for calculations of each steps of predication and measurement update:
+Since Kalman filter is based on the assumption that sensor data can be modelled using Gaussian distribution, in which case if the system is nonlinear, transformation of sensor data model using nonlinear system model and measurement matrix will result in non-Gaussian distribution in predicted states. In this case a linearization of the state transition and measurement function can be used for prediction of covariance matrices which is the basis of Extended Kalman Filters (EKF). Mean values can still be predicted by nonlinear functions. Following equations are used for calculations of predication and measurement update steps:
 
 ![alt text](./images/equationsEKF.png)
 
-Where H (measurement matrix) and F (state transition matrix) are Jacobian of nonlinear f and h functions.
+Where H and F are Jacobian of nonlinear f and h functions.
