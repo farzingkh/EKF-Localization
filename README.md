@@ -1,4 +1,4 @@
-# Sensor Fusion using EKF
+# Localization using EKF
 This repository include an example application of Extended Kalman Filter using  ```robot_pose_ekf```  ROS package on gazebo turtle bot simulation package using its IMU and wheel odometry data
 
 ## Directory Structure
